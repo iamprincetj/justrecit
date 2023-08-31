@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JustReciT | Home page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div id="body">
+        <header id="header">
+            <a href="index.html" title="Home"><div id="logo-img"></div></a>
+            <div id="menu-img"></div>
+        </header>
+        <div class="fa-bars" id="nav-bar">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </div>
+
+        <main id="main-body">
+            <div id="welcome">
+                <h1>Welcome to <span>JustReciT</span></h1>
+                <h2>Keep the <span>Mood</span> Going</h2>
+            </div>
+
+            <div id="search">
+                <input type="search" id="search-artist" placeholder="Artist" class="search-page" title="Please Enter Artist Name" required>
+                <input type="search" id="search-track" placeholder="Song" class="search-page" title="Please Enter Song's Name" required>
+            </div>
+            <input type="submit" value="Try it Now!" id="search-btn">
+        </main>
+    </div>
+</body>
+<script src="navbar.js"></script>
+<script src="search.js"></script>
+</html>
