@@ -98,17 +98,6 @@ makePage = {
 
         };*/
 
-            /*let req_token = await fetch("https://accounts.spotify.com/api/token", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/x-www-form-urlencoded"
-            },
-            body: "grant_type=client_credentials&client_id=bcb4a2e62cdc468387365b820d9efa20&client_secret=19a9232f82e54a1b87a4433705c684f8"
-            });
-            let data_token = await req_token.json();*/
-            //let token = data_token.access_token;
-            //console.log(token);
-
             let items_title = [];
             let items_date = {};
             let items_overview = {};
