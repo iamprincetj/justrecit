@@ -1,4 +1,8 @@
-import { clientId, clientSecret } from './.secret/secret.js';
+// Load environment variables from .env file
+
+
+const clientSecret = process.env.CLIENTSECRET;
+const clientId = process.env.CLIENTID;
 
 
 let makePage;
