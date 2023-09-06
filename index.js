@@ -1,10 +1,6 @@
 // Load environment variables from .env file
 
 
-const clientSecret = process.env.clientSecret;
-const clientId = process.env.clientId;
-
-
 let makePage;
 let getBody;
 let items;
