@@ -1,0 +1,367 @@
+	*{
+		margin: 0;
+		padding: 0;
+		font-family: Montserrat;
+		color: white;
+		box-sizing: border-box;
+		text-decoration: none;
+		list-style: none;
+		font-weight: bold;
+	}
+	
+  body {
+    font-family: Monsterrat, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #112e42;;
+  }
+  header {
+    background-color: #000;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+	
+  }
+
+  html{
+	scroll-behavior: smooth;
+  }
+
+  .logo {
+    font-weight: 900;
+    animation: slideTop 2s ease forwards;
+    animation-delay: calc(.1s * var(--i));
+  }
+
+  @keyframes slideTop {
+	from {
+	  opacity: 0;
+	  transform: translateX(-100px);
+	}
+	to {
+	  opacity: 1;
+	  transform: translateX(0);
+	}
+  }
+  @keyframes slideBottom {
+	from {
+	  opacity: 0;
+	  transform: translateY(100px);
+	}
+	to {
+	  opacity: 1;
+	  transform: translateY(0);
+	}
+  }
+  
+  @keyframes slideLeft {
+	from {
+	  opacity: 0;
+	  transform: translateX(-100px);
+	}
+	to {
+	  opacity: 1;
+	  transform: translateX(0);
+	}
+  }
+
+  @keyframes slideRight {
+	from {
+	  opacity: 0;
+	  transform: translateX(100px);
+	}
+	to {
+	  opacity: 1;
+	  transform: translateX(0);
+	}
+  }
+  
+.card {
+    display: grid;
+	height: auto;
+	max-width: 210px;
+	margin: 20px;
+	border-radius: 3px;
+	overflow: hidden;
+	box-shadow: 5px 5px 20px black;
+	position: relative;
+	opacity: 0;
+	animation: slideBottom 1s ease forwards;
+	animation-delay: 1.6s;
+  }
+  
+  .container {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	opacity: 0;
+	animation: slideLeft 1s ease forwards;
+	animation-delay: 1.6s;
+  }
+  
+  .card img {
+	max-height: 80%;
+	width: 100%;
+	object-fit: cover;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+  }
+  
+  .intro {
+	max-height: 100px;
+	padding: 10px;
+	box-sizing: border-box;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	background: rgba(14, 14, 13, 0.9);
+	color: white;
+	transition: all 0.5s;
+  }
+
+  
+
+  /* Adjust the width of the flip cards */
+  .flip-card {
+      border: 1px solid red;
+      width: 200px; /* Adjust card width as needed */
+      height: 300px; /* Adjust card height as needed */
+      perspective: 1000px;
+      margin-left: 4rem; /* Add some margin between cards */
+      margin-top: 2rem;
+  }
+
+  
+  .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 10px;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+  }
+  
+  .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 10px;
+  }
+  
+  .flip-card-front {
+      background-color: #f1f1f1;
+      overflow: hidden;
+  }
+  .flip-card-front img{
+      max-height: 100%;
+  }
+  .flip-card-back {
+      background-color: rgb(65, 111, 172);
+      color: white;
+      transform: rotateY(180deg);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+    
+  .card-content {
+      padding: 20px;
+      text-align: center;
+  }
+    
+  .card-content h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+  }
+  
+  .card-content p {
+      font-size: 16px;
+      margin-bottom: 20px;
+  }
+
+  .card {
+		display: grid;
+		height: auto;
+		max-width: 210px;
+		margin: 20px;
+		border-radius: 3px;
+		overflow: hidden;
+		box-shadow: 5px 5px 20px black;
+		position: relative;
+		margin-top: 3rem;
+		opacity: 0;
+		animation: slideBottom 1s ease forwards;
+		animation-delay: 1.6s;
+	  }
+	
+	
+	
+	button {
+		margin: 0 auto; /* Center the buttons horizontally */
+		display: inline-block; /* Ensure each button takes full width */
+		margin-top: 1rem; /* Add some vertical spacing between buttons */
+		margin-left: 1rem;
+	}
+  
+
+.attribute{
+    position: absolute;
+    bottom: 10px;
+}
+
+  .portfolio {
+	background-color: var(--bg-color);
+  }
+  
+  .card-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 1rem;
+  }
+  
+  .card {
+	width: 100%;
+	border: 1px solid var(--main-color);
+	border-radius: 0.5rem;
+  }
+  
+  .card-img-top {
+	width: 100%;
+	height: 250px;
+	object-fit: cover;
+	border-radius: 0.5rem 0.5rem 0 0;
+  }
+  
+  .card-body {
+	padding: 1rem;
+  }
+  
+  .card-title {
+	font-size: 1.5rem;
+	margin-bottom: 1rem;
+  }
+  
+  .card-text {
+	font-size: 1.2rem;
+  }
+
+  h1{
+	font-size: 5rem; 
+	font-weight: 700; 
+	color: white; 
+	margin-top: 10rem;
+  }
+  
+  h3{
+    font-size: 1.5rem; 
+    margin-top: 2rem;
+    margin-left: 32rem;
+    }
+    
+  .card:hover {
+	cursor: pointer;
+  }
+  
+  .btn, .nav-btn {
+	width: 20px;
+	color: #000;
+	font-size: 18px;
+	margin-left: 2rem;
+  }
+  .card:hover .intro {
+	max-height: 180px;
+	bottom: 0;
+  }
+  
+  .card:hover p {
+	visibility: visible;
+	opacity: 1;
+  }
+
+ 
+
+section .footer{
+	left: 0;
+	bottom: 12px;
+	width: 100%;
+	padding-top: 80px;
+	background-color:#232222;
+	align-items: center;
+  }
+
+  footer {
+    display: flex;
+    align-items:center;
+    gap: 40px;
+    margin: 0 30px;
+    color: #bab5b5;
+    font-size: 0.8rem;
+    margin-left:30rem;
+    margin-top: 4rem;
+  }
+
+@media screen and (max-width: 768px) {
+	.main-content {
+	  max-width: 80%;
+	  margin: 2rem auto;
+	  margin-top: 10rem;
+	  color: #fff;
+	  font-size: 1.5rem;
+	}
+  
+	h1{
+		font-size: 1.5rem; 
+		font-weight: 700; 
+		color: white; 
+		margin-top: 13rem;
+	  }
+
+    h3{
+      font-size: 1.5rem; 
+      margin-top: 4rem;
+      margin-left: 6rem;
+      }
+
+	  main{
+		background-color: black
+	  }
+    .search-page{
+      margin-left: -6rem;
+    }
+
+    .card-container {
+      margin-top: 3rem; /* Add some margin between cards */
+      margin-left: 1.5rem;
+    }
+
+    #paginate-container {
+      margin: 0 calc(100%/3);
+    }
+
+    #paginate-container{
+			justify-content: center;
+			display: contents;
+			margin-left: 6rem;
+		}
+
+	  .welcome-image img {
+		max-width: 100%;
+		}
+
+        footer {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin: 0 30px;
+            color: #fff;
+            font-size: 0.6rem;
+            margin-left: 4rem;
+            margin-top: 3rem;
+          }
+	}

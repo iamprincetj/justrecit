@@ -1,8 +1,6 @@
 // Load environment variables from .env file
+import { clientSecret, clientId } from './secret.js';
 
-
-const clientSecret = process.env.clientSecret;
-const clientId = process.env.clientId;
 
 
 let makePage;
@@ -31,7 +29,7 @@ if (currPage) {
     currentPage = 1;
 }
 
-getPaginateContainer.style.visibility = "hidden";
+//getPaginateContainer.style.visibility = "hidden";
 
 let token = localStorage.getItem("access_token");
 let expiration_time = localStorage.getItem("expiration_time");
@@ -163,8 +161,8 @@ let DisplayList = function (items, wrapper, row, page) {
     let id = items[4];
     let getMusicContainer = document.querySelectorAll(".card");
     let getMusicContainerImg = document.querySelectorAll(".card img");
-    let getMusicContainerArtist = document.querySelectorAll(".card .intro h3");
-    let getMusicContainerOverview = document.querySelectorAll(".card .intro p");
+    let getMusicContainerArtist = document.querySelectorAll(".card-content h2");
+    let getMusicContainerOverview = document.querySelectorAll(".card-content p");
 
     for (let i = 0; i < getMusicContainer.length; i++) {
         getMusicContainerImg[i].src = "";
@@ -183,13 +181,15 @@ let DisplayList = function (items, wrapper, row, page) {
         getMusicContainerOverview[count].textContent = itemsList[i] 
     };
 
-    getMusicContainer.forEach((music)=> {
+    /*getMusicContainer.forEach((music)=> {
+        let artist = music.querySelector("h2").textContent;
+        let musicTitle = music.querySelector("p").textContent;
+        music.setAttribute("title", `${artist} - ${musicTitle}`);
         music.addEventListener("click", () => {
-            let musicTitle = music.querySelector("p").textContent;
            // window.open(`https://www.youtube.com/results?search_query=${musicTitle}+${items_artist[musicTitle]}`, "_blank");
             window.open(`https://open.spotify.com/track/${id[musicTitle]}`, "_blank");
         });
-    });
+    });*/
 
     // This is to check if our current page is greater than 1, if it is we want to show our previous button
     if (page > 0) {
@@ -246,11 +246,12 @@ let Paginate = function (musicList) {
 
                 currentPage--; // if it's true we decrement our current page by one
             }
+
             sessionStorage.setItem("currentPage", currentPage); // then store it in sessionStorage
 
             DisplayList(musicList, getWrapper, rows, currentPage); //then we want to display the list on that specific page
 
-            btnColor(buttons[currentPage-1], buttons); // then put the color on the right button again
+            btnColor(buttons[currentPage], buttons); // then put the color on the right button again
         });
         
         getNextBtn.addEventListener("click", ()=> {
@@ -263,7 +264,7 @@ let Paginate = function (musicList) {
             // you know what all this do
             sessionStorage.setItem("currentPage", currentPage);
             DisplayList(musicList, getWrapper, rows, currentPage);
-            btnColor(buttons[currentPage-1], buttons);
+            btnColor(buttons[currentPage], buttons);
         });
 
 
@@ -273,10 +274,10 @@ let Paginate = function (musicList) {
                 // then for each of the buttons we are make an event listerner of when it's clicked
 
                 btnColor(buttons[i], buttons); // then calling our function that colors our button when any of them is clicked # later implemented... hold on
-                DisplayList(musicList, getWrapper, rows, i+1); //Now we are calling our displayList depending on which button is clicked
+                DisplayList(musicList, getWrapper, rows, i); //Now we are calling our displayList depending on which button is clicked
                 // so if you click on button 2 we want page 2's list to show not page 1's, Right? Well that's what this guy those
 
-                sessionStorage.setItem("currentPage", i+1); // now am storing our current page in sessionStorage so when we are in page 2 if we refresh the page it still stays in page 2 not otherwise.
+                sessionStorage.setItem("currentPage", i); // now am storing our current page in sessionStorage so when we are in page 2 if we refresh the page it still stays in page 2 not otherwise.
 
 
                 currentPage = sessionStorage.getItem("currentPage");//this set or current page to our exact current page when any button is clicked

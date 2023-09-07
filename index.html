@@ -34,8 +34,7 @@
     border: none;
     outline: none;
     border-radius: 5px;
-    font-size: 16px;
-    font-weight: 900;
+    font-size: 10px;
     padding-bottom: 3px;
   }
 
@@ -44,6 +43,25 @@
       height: 4.5vh;
       background-color: #fff;
       color: #000;
+  }
+
+  .a {
+    background-image: url("images/ed.png");
+  }
+  .b {
+    background-image: url("images/rickross.png");
+  }
+  .c {
+    background-image: url("images/burna.png");
+  }
+  .a, .b, .c {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .flip-card {
+    height: 350px;
   }
 
   </style>
@@ -70,8 +88,8 @@
     <section class="home" id="home">
       <div class="home-content">
           <h1>
-              <span style="font-weight: 900; font-size: 7rem;">Welcome to Just<span style="color: red; font-size: 7.5rem;">Rec</span>iT.</span><br>
-              <h2>Keep the <span>Mood</span> Going</h2>
+              <span style="font-weight: 900; font-size: 5rem;" class="home-content";>Welcome to Just<span style="color: red; font-size: 5.5rem;">Rec</span>iT.</span><br>
+              <h2>Keep the <span style="color: red;">Mood</span> Going</h2>
           </h1>
   
           <div class="shadowed-text">
@@ -123,12 +141,12 @@
       <h2>How to Use is So Easy!</h2>
       <p>
         JustReciT is easy to use just Click <a href="#">Here</a> and search away<br><br>
-        JustReciT is powered by <a href="https://developer.spotify.com/documentation/web-api">Spotify's API</a></p></div>
+        JustReciT is powered by an <a href="https://developer.spotify.com/documentation/web-api">API</a></p></div>
       </p>
     </section>
    
     <div class="about-image">
-      <img src="/images/lady1.jpg">
+      <img src="/images/music-image.jpg">
       
     </div>
       </section>
@@ -136,13 +154,13 @@
       <section class="popular" id="Popular">
         <h2 class="heading">Popular Demand</h2>
             <div class="card-container">
-              <div class="flip-card">
+              <div class="flip-card" style="height: 300px;">
                 <!-- Card 1 -->
                 <div class="flip-card-inner">
-                  <div class="flip-card-front">
-                    <img src="/images/rickross.png" alt="Card Front Image">
+                  <div class="flip-card-front card a">
+                    <!--<img src="/images/ed.png" alt="Card Front Image">-->
                   </div>
-                  <div class="flip-card-back">
+                  <div class="flip-card-back card">
                     <div class="card-content">
                       <h2>HIP HOP</h2>
                       <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -152,13 +170,13 @@
                 </div>
               </div>
             
-              <div class="flip-card">
+              <div class="flip-card" style="height: 300px;">
                 <!-- Card 2 -->
                 <div class="flip-card-inner">
-                  <div class="flip-card-front">
-                    <img src="/images/burna.png" alt="Card Front Image">
+                  <div class="flip-card-front card b">
+                    <!--<img src="/images/ed.png" alt="Card Front Image">-->
                   </div>
-                  <div class="flip-card-back">
+                  <div class="flip-card-back card">
                     <div class="card-content">
                       <h2>AFRO BEAT</h2>
                       <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -168,13 +186,13 @@
                 </div>
               </div>
             
-              <div class="flip-card">
+              <div class="flip-card" style="height: 300px;">
                 <!-- Card 3 -->
                 <div class="flip-card-inner">
-                  <div class="flip-card-front">
-                    <img src="/images/ed.png" alt="Card Front Image">
+                  <div class="flip-card-front card c">
+                    <!--<img src="/images/ed.png" alt="Card Front Image">-->
                   </div>
-                  <div class="flip-card-back">
+                  <div class="flip-card-back card">
                     <div class="card-content">
                       <h2>RnB</h2>
                       <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -244,6 +262,15 @@
 <!---contact design-->
 
 <footer>
+
+  <div class="home-sci">
+      <ul>
+          <li><a href="#"><i class="fa-brands fa-instagram instagram"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-github github"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-twitter twitter"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-linkedin linkedin"></i></a></li>
+      </ul>
+  </div>
     <div class="footer">
       <p>&copy; 2023 JustReciT. All rights reserved.</p>
     </div>
