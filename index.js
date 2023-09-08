@@ -1,6 +1,9 @@
 // Load environment variables from .env file
 import { clientSecret, clientId } from './secret.js';
 
+let getMusicContainer = document.querySelectorAll(".flip-card");
+let getMusicContainerBack = document.querySelectorAll(".flip-card-back");
+
 
 
 let makePage;
@@ -28,8 +31,6 @@ if (currPage) {
 }else{
     currentPage = 1;
 }
-
-//getPaginateContainer.style.visibility = "hidden";
 
 let token = localStorage.getItem("access_token");
 let expiration_time = localStorage.getItem("expiration_time");
@@ -115,6 +116,7 @@ makePage = async()=> {
     let res_recommendation = await fetch(url);
     let data_recommendation = await res_recommendation.json();
     let recommendationList = data_recommendation.tracks;
+    console.log(recommendationList);
     for (let i = 0; i < recommendationList.length; i++) {
         items_title.push(recommendationList[i].name);
 
@@ -159,7 +161,7 @@ let DisplayList = function (items, wrapper, row, page) {
     let items_artist = items[1];
     let items_img = items[2];
     let id = items[4];
-    let getMusicContainer = document.querySelectorAll(".card");
+    let getMusicContainer = document.querySelectorAll(".flip-card");
     let getMusicContainerImg = document.querySelectorAll(".card img");
     let getMusicContainerArtist = document.querySelectorAll(".card-content h2");
     let getMusicContainerOverview = document.querySelectorAll(".card-content p");
@@ -173,23 +175,48 @@ let DisplayList = function (items, wrapper, row, page) {
     
     // This is to loop through our list of movie titles and display them on each page
     let count = 0;
+    let currentpage = []
     
     for (let i = perPage; i < row+perPage; i++, count++) { //this makes sure that the specified number of movie items are displayed. 
         if (itemsList[i] == undefined) break; // this is to stop the loop when we reach the end of our list, so we don't get an error
         getMusicContainerImg[count].src = items_img[itemsList[i]];
         getMusicContainerArtist[count].textContent = items_artist[itemsList[i]];
-        getMusicContainerOverview[count].textContent = itemsList[i] 
+        getMusicContainerOverview[count].textContent = itemsList[i];
+        currentpage.push(i);
     };
 
-    /*getMusicContainer.forEach((music)=> {
+    getMusicContainer.forEach((music)=> {
+        music.style.display = "block";
+    });
+
+    getMusicContainerBack.forEach((music)=> {
         let artist = music.querySelector("h2").textContent;
         let musicTitle = music.querySelector("p").textContent;
         music.setAttribute("title", `${artist} - ${musicTitle}`);
-        music.addEventListener("click", () => {
-           // window.open(`https://www.youtube.com/results?search_query=${musicTitle}+${items_artist[musicTitle]}`, "_blank");
-            window.open(`https://open.spotify.com/track/${id[musicTitle]}`, "_blank");
+        music.addEventListener("click", ()=> {
+            let musicId = id[musicTitle];
+            console.log(artist);
+            sessionStorage.setItem("musicId", musicId);
+            sessionStorage.setItem("artist", artist);
+            sessionStorage.setItem("musicTitle", musicTitle);
+            //window.open("output0.html", "_blank");
         });
-    });*/
+    });
+
+    /*for (let i = 0; i < getMusicContainerBack.length; i++) {
+        console.log(i, currentPage);
+        getMusicContainerBack[i].addEventListener("click", ()=> {
+            let j = currentpage[i];
+            let musicId = id[itemsList[j]];
+            let artist = items_artist[itemsList[j]];
+            let musicTitle = itemsList[j];
+            console.log(artist);
+            sessionStorage.setItem("musicId", musicId);
+            sessionStorage.setItem("artist", artist);
+            sessionStorage.setItem("musicTitle", musicTitle);
+            //window.open("output0.html", "_blank");
+        });
+    };*/
 
     // This is to check if our current page is greater than 1, if it is we want to show our previous button
     if (page > 0) {

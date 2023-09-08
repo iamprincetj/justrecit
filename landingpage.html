@@ -3,7 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>JustReciT.</title>
+<title></title>
+<script>
+	let getSearchQuery = sessionStorage.getItem("searchItem");
+	if (getSearchQuery) {
+		document.title = `JustReciT | ${getSearchQuery}`;
+	}else {
+		document.title = `JustReciT`;
+	}
+	
+</script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.0.7/css/boxicons.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
 <style>
@@ -114,6 +123,7 @@
 
 /* Adjust the width of the flip cards */
 .flip-card {
+  display: none;
     width: 200px; /* Adjust card width as needed */
     height: 300px; /* Adjust card height as needed */
     perspective: 1000px;
@@ -142,7 +152,9 @@
     height: 100%;
     backface-visibility: hidden;
     border-radius: 10px;
+    cursor: pointer;
 }
+
   
 .flip-card-front {
     background-color: #f1f1f1;
@@ -175,16 +187,19 @@ button {
   }
   
 .card-content {
+  overflow: hidden;
     padding: 20px;
     text-align: center;
 }
   
 .card-content h2 {
+    text-shadow: 0 0 5px #000;
     font-size: 24px;
     margin-bottom: 10px;
 }
   
 .card-content p {
+    text-shadow: 0 0 5px #000;
     font-size: 16px;
     margin-bottom: 20px;
 }
@@ -200,9 +215,15 @@ button {
   }
   
   .card-container {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-	gap: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+  }
+
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
   
   
@@ -290,7 +311,8 @@ section .footer{
   }
 
   #paginate-container {
-	margin: 0 calc(100%/3);
+    visibility: hidden;
+	  margin: 0 calc(100%/3);
   }
 
   .active {
@@ -306,6 +328,15 @@ section .footer{
 	  color: #fff;
 	  font-size: 1.5rem;
 	}
+
+  #paginate-container {
+    visibility: hidden;
+	  margin: 0 5.7rem;
+  }
+
+  .btn, .nav-btn {
+	margin-left: 0.7rem;
+  }
   
 	h1{
 		font-size: 1.5rem; 
@@ -327,6 +358,10 @@ section .footer{
     .card-container {
       margin-top: 3rem; /* Add some margin between cards */
       margin-left: 1.5rem;
+    }
+
+    .flip-card {
+      margin-left: 0;
     }
 
 	  .welcome-image img {
@@ -352,14 +387,16 @@ section .footer{
 </head>
 <header>
 	<div class="logo">
-<a href="index.html" style="font-weight: 900; font-size: 4rem; font-family: Montserrat;">JustReciT.</a>
-</div>
+    <a href="index.html" style="font-weight: 900; font-size: 4rem; font-family: Montserrat;">JustReciT.</a>
+  </div>
  </header>
 <body>
   
   <div id="search">
     <input style="color: #000;" type="search" id="search-item" placeholder="Song Name..." class="search-page" title="Please Enter Song" required>
   </div>
+
+  <a href="output0.html">here</a>
 
 	<section class="popular" id="Popular">
         <h3 class="heading">Hover the cards</h3>
@@ -435,7 +472,7 @@ section .footer{
                     <div class="card-content">
                       <h2>Wizkid</h2>
                       <p>1.Money and Love</p>
-                      <a href="#" class="btn">Read More</a>
+                      <a href="#" class="btn hide">Read More</a>
                     </div>
                   </div>
                 </div>
@@ -462,4 +499,5 @@ section .footer{
 	
 </body>
 <script src="index.js" type="module"></script>
+<script src="index1.js"></script>
 </html>
