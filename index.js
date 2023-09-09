@@ -120,7 +120,7 @@ makePage = async()=> {
 
 
     let url = `https://api.spotify.com/v1/recommendations?type=track&seed_tracks=${seed_tracks}&seed_artists=${seed_artists}&seed_genres=${seed_genres}&access_token=${token}`
-
+    
 
 
     //let url =  `./data/mysong.json`;
