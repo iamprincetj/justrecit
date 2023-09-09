@@ -64,22 +64,63 @@
     height: 350px;
   }
 
+  .ul {
+    margin-left: 10%;
+  }
+
+  .ul a:hover, .menu-icon {
+    background-color: var(--main-color);
+    color: #fff;
+    border-radius: 1rem;
+    transition: all.3s ease-in-out;
+    font-size: 3.5rem;
+  }
+
+  .ul i,  .ul a {
+    font-size: 3rem;
+    color: rgb(75, 74, 74);
+    gap: 1rem;
+
+  }
+
+  a {
+    color: #00abf0;
+  }
+
+  a:hover {
+    color: #fff;
+    font-size: 1.7rem;
+  }
+
+  .ul a {
+    margin-left: 3rem;
+  }
+
+  .home-sci {
+    display: block;
+  }
+
+  footer img {
+    width: 5rem;
+    border-radius: 15px;
+  }
+
   </style>
   </head>
 
 
     <header>
         <div class="logo">
-          <a href="#" style="font-weight: 900; font-size: 4rem; font-family: Montserrat; margin-left: -7rem;">JustReciT.</a>
+          <a href="#" style="font-weight: 900; font-size: 4rem; font-family: Montserrat; margin-left: -7rem; color: #00abf0;">JustReciT.</a>
         </div>
-        <div class="bx bx-menu"id="menu-icon"></div>
+        <div class="bx bx-menu" class="menu-icon" id="menu-icon"></div>
 
         <nav>
           <a href="#home" style="--i:1;" class="active">HOME</a>
           <a href="#about" style="--i:2;">ABOUT</a>
             <a href="#services" style="--i:4;" >SERVICES</a>
             <a href="#Popular" style="--i:5;" >POPULAR DEMAND</a>
-            <a href="#popular_genre" style="--i:5;" >POPULAR GENRE</a>
+            <a href="#popular_genre" style="--i:5;" >KEY FEATURES</a>
             <a href="#contact" style="--i:6;" >CONTACT</a>
         </nav>
     </header>
@@ -88,25 +129,24 @@
     <section class="home" id="home">
       <div class="home-content">
           <h1>
-              <span style="font-weight: 900; font-size: 5rem;" class="home-content";>Welcome to Just<span style="color: red; font-size: 5.5rem;">Rec</span>iT.</span><br>
+              <span style="font-weight: 900; font-size: 5rem;" class="home-content">Welcome to Just<span style="color: red; font-size: 5.5rem;">Rec</span>iT.</span><br>
               <h2>Keep the <span style="color: red;">Mood</span> Going</h2>
           </h1>
   
           <div class="shadowed-text">
-              <p>Why listen to just one song when<br>you can find similar ones and <br>Keep the Mood Going</p>
-              
+              <p>Why listen and love just one song when<br>you can find similar ones and <br>Keep the Mood Going</p>
           </div>
           <div id="search">
             <input type="search" id="search-item" placeholder="Song Name..." class="search-page" title="Please Enter Song" required>
           </div>
             <input type="submit" value="Try it Now!" id="search-btn">
           <div class="home-sci">
-              <ul>
-                  <li><a href="https://www.instagram.com/iam.just_in/"><i class="fa-brands fa-instagram instagram"></i></a></li>
-                  <li><a href="https://github.com/iamprincetj/"><i class="fa-brands fa-github github"></i></a></li>
-                  <li><a href="https://twitter.com/Iam_princetj"><i class="fa-brands fa-twitter twitter"></i></a></li>
-                  <li><a href="https://www.linkedin.com/in/justin-nwanze-7983b2254/"><i class="fa-brands fa-linkedin linkedin"></i></a></li>
-              </ul>
+              <div class="ul">
+                  <a href="https://www.instagram.com/iam.just_in/"><i class="fa-brands fa-instagram instagram"></i></a>
+                  <a href="https://github.com/iamprincetj/"><i class="fa-brands fa-github github"></i></a>
+                  <a href="https://twitter.com/Iam_princetj"><i class="fa-brands fa-twitter twitter"></i></a>
+                  <a href="https://www.linkedin.com/in/justin-nwanze-7983b2254/"><i class="fa-brands fa-linkedin linkedin"></i></a>
+              </div>
           </div>
       </div>
 
@@ -140,8 +180,7 @@
       <h1 class="heading">SERVICES</h1>
       <h2>How to Use is So Easy!</h2>
       <p>
-        JustReciT is easy to use just Click <a href="#">Here</a> and search away<br><br>
-        JustReciT is powered by an <a href="https://developer.spotify.com/documentation/web-api">API</a></p></div>
+        JustReciT is powered by <a href="https://developer.spotify.com/documentation/web-api">Spotify's API</a>, Spotify is a music streaming service that provides access to millions of songs, podcasts, and videos from artists all over the world. <br>JustReciT is easy to use. <br>You can start by clicking on the shiny red <a href="#">“Try it now”</a> button and search away
       </p>
     </section>
    
@@ -213,7 +252,7 @@
       <img src="/images/Search-key.png" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">SEARCH</h5>
-        <p class="card-text">The SEARCH feature which JustReciT Provides is an old fashioned searching for your desired song that JustReciT Has.</p>
+        <p class="card-text">The search feature on JustReciT is user-friendly and easy to use. You can search for any song you want by typing in the name of the song or the artist in the search bar. The search results will display songs similar to that of your query </p>
       </div>
     </div>
 
@@ -221,7 +260,7 @@
       <img src="/images/Output-key.png" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">SEARCH OUTPUT</h5>
-        <p class="card-text">The OUTPUT feature which JustReciT Provides is displaying your search results in a nice way.</p>
+        <p class="card-text">JustReciT provides an output feature that displays your search results in a user-friendly and visually appealing way. When you search for a song, podcast, or video on JustReciT, the search results are displayed in a clear and concise manner. You can easily navigate through the search results and select the content you want to listen</p>
       </div>
     </div>
 
@@ -229,7 +268,7 @@
       <img src="/images/contact-key.png" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">CONTACT</h5>
-        <p class="card-text">The CONTACT feature which JustReciT Provides is having to give feedbacks, things you would like improvements on JustReciT.</p>
+        <p class="card-text">JustReciT provides a contact feature that allows you to give feedback and suggest improvements. You can use the contact form on the JustReciT website to submit your feedback and suggestions. The JustReciT team will review your feedback and suggestions and take them into consideration for future updates.</p>
       </div>
     </div>
     <div class="card">
@@ -261,27 +300,22 @@
 </section>
 <!---contact design-->
 
-<footer>
+  <footer>
 
-  <div class="home-sci">
-      <ul>
-          <li><a href="#"><i class="fa-brands fa-instagram instagram"></i></a></li>
-          <li><a href="#"><i class="fa-brands fa-github github"></i></a></li>
-          <li><a href="#"><i class="fa-brands fa-twitter twitter"></i></a></li>
-          <li><a href="#"><i class="fa-brands fa-linkedin linkedin"></i></a></li>
-      </ul>
-  </div>
+    <img src="images/logo.png" alt="JustReciT's logo">
+    <div class="home-sci">
+      <h3>connect with us</h3>
+      <div class="ul" style="margin-top: 1rem;">
+          <a href="https://www.instagram.com/iam.just_in/"><i class="fa-brands fa-instagram instagram"></i></a>
+          <a href="https://github.com/iamprincetj/"><i class="fa-brands fa-github github"></i></a>
+          <a href="https://twitter.com/Iam_princetj"><i class="fa-brands fa-twitter twitter"></i></a>
+          <a href="https://www.linkedin.com/in/justin-nwanze-7983b2254/"><i class="fa-brands fa-linkedin linkedin"></i></a>
+      </div>
+    </div>
     <div class="footer">
       <p>&copy; 2023 JustReciT. All rights reserved.</p>
     </div>
-    <div class="home-sci">
-      <ul>
-          <li><a href="#"><i class="fa-brands fa-instagram instagram"></i></a></li>
-          <li><a href="#"><i class="fa-brands fa-github github"></i></a></li>
-          <li><a href="#"><i class="fa-brands fa-twitter twitter"></i></a></li>
-          <li><a href="#"><i class="fa-brands fa-linkedin linkedin"></i></a></li>
-      </ul>
-  </div>
+
 </footer>
 
 <style>
@@ -307,6 +341,37 @@ form .input-container input, form .input-container textarea{
 
 <!-- Your custom script should be loaded after external libraries -->
 <script src="index1.js"></script>
+<script>
+  let getMenu = document.querySelector("#menu-icon");
+  let getNav = document.querySelectorAll("header nav a");
+  let navStat = false;
+
+  if (getMenu) {
+      getMenu.addEventListener("click", ()=> {
+        if (navStat === false) {
+          getNav.forEach((nav)=> {
+            nav.style.display = "block";
+          });
+          navStat = true;
+          getMenu.style.display = "block";
+        }else {
+          getNav.forEach((nav)=> {
+            nav.style.display = "none";
+          });
+          navStat = false;
+        }
+    });
+  }
+
+  getNav.forEach((links)=> {
+    links.addEventListener("click", ()=> {
+      getNav.forEach((link)=> {
+        link.classList.remove("active");
+      });
+      links.classList.add("active");
+    });
+  });
+</script>
 
 </body>
 </html>

@@ -11,7 +11,7 @@ getSearchItem.addEventListener("keyup", (e)=> {
             sessionStorage.setItem("currentPage", 1);
             window.location.href = "landingpage.html"
         }else {
-            alert("Please enter a search item");
+            alert("Please enter a song name");
         }
     }
 });

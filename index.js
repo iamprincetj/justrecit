@@ -73,14 +73,24 @@ setInterval(() => {
 
 makePage = async()=> {
 
-    let res = await fetch(`https://api.spotify.com/v1/search?query=${search_query}&type=track&limit=3&access_token=${token}`);
-    let data = await res.json();
+    //let res = await fetch(`https://api.spotify.com/v1/search?query=${search_query}&type=track&limit=3&access_token=${token}`);
+    let res = await fetch(`https://api.spotify.com/v1/search?access_token=${token}&query=${search_query}&type=track&limit=3`).catch((error) => {
+        console.log(error);
+        alert("Sorry there was an error, go again please");
+    });
+    let data = await res.json().catch((error) => {
+        console.log(error);
+        alert("Sorry there was an error, go again please");
+    });
     let dataList = data.tracks.items;
     let seed_tracks = "";
     let seed_artists = "";
     let seed_genres = [];
 
     let date_length = dataList.length;
+    if (date_length == 0) {
+        alert("Sorry there was an error, go again please");
+    }
 
     for (let i = 0; i < date_length; i++) {
         if (i < date_length - 1) {
@@ -166,6 +176,10 @@ let DisplayList = function (items, wrapper, row, page) {
     let getMusicContainerArtist = document.querySelectorAll(".card-content h2");
     let getMusicContainerOverview = document.querySelectorAll(".card-content p");
 
+    let getHeading = document.querySelector(".heading");
+
+    getHeading.textContent = `Recommendations for ${search_query}`;
+
     for (let i = 0; i < getMusicContainer.length; i++) {
         getMusicContainerImg[i].src = "";
         getMusicContainerArtist[i].textContent = "";
@@ -189,34 +203,23 @@ let DisplayList = function (items, wrapper, row, page) {
         music.style.display = "block";
     });
 
+    let musicList1 = [];
+
     getMusicContainerBack.forEach((music)=> {
-        let artist = music.querySelector("h2").textContent;
-        let musicTitle = music.querySelector("p").textContent;
-        music.setAttribute("title", `${artist} - ${musicTitle}`);
-        music.addEventListener("click", ()=> {
-            let musicId = id[musicTitle];
-            console.log(artist);
-            sessionStorage.setItem("musicId", musicId);
-            sessionStorage.setItem("artist", artist);
-            sessionStorage.setItem("musicTitle", musicTitle);
-            //window.open("output0.html", "_blank");
-        });
+        musicList1.push(music);
     });
 
-    /*for (let i = 0; i < getMusicContainerBack.length; i++) {
-        console.log(i, currentPage);
-        getMusicContainerBack[i].addEventListener("click", ()=> {
-            let j = currentpage[i];
-            let musicId = id[itemsList[j]];
-            let artist = items_artist[itemsList[j]];
-            let musicTitle = itemsList[j];
-            console.log(artist);
+    for (let i = 0; i < musicList1.length; i++) {
+        musicList1[i].addEventListener("click", ()=> {
+            let artist = musicList1[i].querySelector("h2").textContent;
+            let musicTitle = musicList1[i].querySelector("p").textContent;
+            let musicId = id[musicTitle];
             sessionStorage.setItem("musicId", musicId);
             sessionStorage.setItem("artist", artist);
             sessionStorage.setItem("musicTitle", musicTitle);
-            //window.open("output0.html", "_blank");
+            window.open("output0.html", "_blank");
         });
-    };*/
+    };
 
     // This is to check if our current page is greater than 1, if it is we want to show our previous button
     if (page > 0) {

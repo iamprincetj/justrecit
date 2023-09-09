@@ -21,6 +21,7 @@
 
 #menu-icon {
 	display: none;
+	cursor: pointer;
 }
 
 .logo {
@@ -80,6 +81,8 @@ ul li {
 	list-style: none;
 
 	cursor: pointer;
+	
+
 }
 
 ul li a .fa-brands {
@@ -88,6 +91,7 @@ ul li a .fa-brands {
 	gap: 1rem;
 	margin-right: -60px;
 	margin-left: 12rem;
+	
 }
 
 
@@ -159,7 +163,7 @@ nav a {
 
 
 nav a.active,
-nav a:hover {
+nav a:hover, .menu-icon {
 	background-color: var(--main-color);
 	color: #fff;
 	border-radius: 1rem;
@@ -181,7 +185,7 @@ nav a:hover {
 	color: var(--text-color);
 	cursor: pointer;
 	float: right;
-	display: hidden;
+	display: block;
 }
 
 
@@ -218,7 +222,7 @@ section {
 
 
 .home-sci {
-	margin-top: 10px;
+	margin-top: 5rem;
 	margin-left: -12.5rem;
 	animation: slideTop 3s ease forwards;
 	animation-delay: calc(.1s * var(--i));
@@ -736,6 +740,10 @@ footer p {
 
 /*   === Screen Size 768px or Smaller  ===   */
 @media(max-width: 768px){
+	#menu-icon {
+		display: block;
+		margin-left: calc(768px/3);
+	}
 	/* Home Section */
 	.navbar .menu-btn{
 		display: block;
@@ -824,6 +832,10 @@ footer p {
 
 @media screen and (max-width:700px) {
 
+	#menu-icon {
+		display: block;
+	}
+
     h1,
     h2 {
         font-size: 3rem;
@@ -894,9 +906,6 @@ footer p {
 		
 		justify-content: space-between;
 	  }
-	  #menu-icon {
-		display: block;
-	  }
 	.ul {
 		font-size: 2rem;
 	}
@@ -904,6 +913,11 @@ footer p {
 
 /* Media query for screens smaller than 600px */
 @media (max-width: 600px) {
+
+	#menu-icon {
+		display: block;
+	}
+	
     .contact-section {
         max-width: 70%;
         padding: 10px;
@@ -1006,6 +1020,10 @@ footer p {
 /* Media query for screens smaller than 576px */
 @media (max-width: 576px) {
 
+	#menu-icon {
+		display: block;
+	}
+
 	.home-content h1 {
 		font-size: 2rem;
 	}
@@ -1028,6 +1046,10 @@ footer p {
 }
 
 @media (max-width: 462px) {
+
+	#menu-icon {
+        display: block;
+    }
     .card-container {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 		margin-left: 4rem;
@@ -1057,9 +1079,6 @@ footer p {
     }
     
     /* Show the menu icon */
-    .menu-icon {
-        display: block;
-    }
     header {
 		padding: 15px;
 		position: fixed;
@@ -1092,4 +1111,10 @@ footer p {
 		margin-left: -2rem;
 	}
 
+}
+
+@media screen and (max-width: 375px) {
+	#menu-icon {
+		display: block;
+	}
 }
