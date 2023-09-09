@@ -284,18 +284,8 @@
 
 <section class="contact-section" id="contact">
   <div class="contact-form">
-      <h2>FeedBacks? Contact Us</h2>
-      <form action="mailto:tochukwunwanze5@gmail.com?subject=FeedBack%20On%20JustReciT" method="post">
-          <div class="input-container">
-              <label for="name">Name:</label>
-              <input type="text" id="name" name="name" required>
-          </div>
-          <div class="input-container">
-              <label for="message">Message:</label>
-              <textarea id="message" name="message" rows="4" required></textarea>
-          </div>
-          <button type="submit">Send</button>
-      </form>
+      <h2>FeedBacks?</h2>
+      <p>Send me an email <a href="mailto:tochukwunwanze5@gmail.com?subject=Feedback On JustReciT&body=message here">Here</a> or through <a href="#contact_me" id="contact_me">Social media</a></p>
   </div>
 </section>
 <!---contact design-->
@@ -303,7 +293,7 @@
   <footer>
 
     <img src="images/logo.png" alt="JustReciT's logo">
-    <div class="home-sci">
+    <div class="home-sci" id="contact_me">
       <h3>connect with us</h3>
       <div class="ul" style="margin-top: 1rem;">
           <a href="https://www.instagram.com/iam.just_in/"><i class="fa-brands fa-instagram instagram"></i></a>
@@ -313,7 +303,7 @@
       </div>
     </div>
     <div class="footer">
-      <p>&copy; 2023 JustReciT. All rights reserved.</p>
+      <p>&copy; 2023 <a href="#">JustReciT.</a> All rights reserved.</p>
     </div>
 
 </footer>
@@ -333,9 +323,20 @@
     color: #fff;
 }
 
-form .input-container input, form .input-container textarea{
-  color: #000;
-}
+  .contact-form p{
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: #000;
+  }
+
+  .contact-form p a {
+    text-shadow: 0 0 0.5px #000;
+    border: none;
+    outline: none;
+  }
+  .contact-form p a:hover{
+    color: #000;
+  }
 
   </style> 
 
@@ -371,6 +372,13 @@ form .input-container input, form .input-container textarea{
       links.classList.add("active");
     });
   });
+
+  let getContact = document.querySelector("#contact_me");
+  
+  getContact.addEventListener("click", ()=> {
+    getContact.textContent = "⬇️⬇️⬇️ 😁";
+  });
+
 </script>
 
 </body>
