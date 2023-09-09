@@ -1,8 +1,15 @@
 // Load environment variables from .env file
-import { clientSecret, clientId } from './secret.js';
+import { clientS, clientId } from './spotify key.js';
 
 let getMusicContainer = document.querySelectorAll(".flip-card");
 let getMusicContainerBack = document.querySelectorAll(".flip-card-back");
+
+getMusicContainerBack.forEach((music)=> {
+    let makePara = document.createElement("p");
+    makePara.classList.add("show");
+    makePara.textContent = "Listen Now";
+    music.appendChild(makePara);
+})
 
 
 
@@ -42,7 +49,7 @@ function getToken () {
     const request = new XMLHttpRequest();
     request.open('POST', 'https://accounts.spotify.com/api/token', false);  // `false` makes the request synchronous
     request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-    request.send(`grant_type=client_credentials&client_id=${clientId}&client_secret=${clientSecret}`);
+    request.send(`grant_type=client_credentials&client_id=${clientId}&client_secret=${clientS}`);
     
     if (request.status === 200) {
         let data = JSON.parse(request.responseText);
@@ -126,7 +133,7 @@ makePage = async()=> {
     let res_recommendation = await fetch(url);
     let data_recommendation = await res_recommendation.json();
     let recommendationList = data_recommendation.tracks;
-    console.log(recommendationList);
+    
     for (let i = 0; i < recommendationList.length; i++) {
         items_title.push(recommendationList[i].name);
 
@@ -134,8 +141,6 @@ makePage = async()=> {
 
         items_image[recommendationList[i].name] = recommendationList[i].album.images[1].url;
         items_id[recommendationList[i].name] = recommendationList[i].id;
-
-        //console.log(recommendationList[i].name, recommendationList[i].artists[0].name);
     }
 
     
@@ -178,7 +183,7 @@ let DisplayList = function (items, wrapper, row, page) {
 
     let getHeading = document.querySelector(".heading");
 
-    getHeading.textContent = `Recommendations for ${search_query}`;
+    getHeading.textContent = `Just Rec - ${search_query}`;
 
     for (let i = 0; i < getMusicContainer.length; i++) {
         getMusicContainerImg[i].src = "";
