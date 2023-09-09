@@ -9,7 +9,7 @@ getSearchItem.addEventListener("keyup", (e)=> {
         if (getSearchItem.value) {
             sessionStorage.setItem("searchItem", getSearchItem.value);
             sessionStorage.setItem("currentPage", 1);
-            window.location.href = "landingpage.html"
+            window.location.href = "output.html"
         }else {
             alert("Please enter a song name");
         }
