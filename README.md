@@ -1,4 +1,4 @@
-JustReciT Website
+## JustReciT
 
 
 
@@ -13,16 +13,6 @@ JustReciT Website
 
 # Introduction
 Welcome to JusReciT Website, your go-to platform for discovering new music based on your favorite genres. If you're a music lover looking for fresh tunes and artists to explore, you've come to the right place!
-
-
-
-# TABLE OF CONTENT #
-About
-Features
-Getting Started
-How to Use
-Contributing
-License
 
 
 # ABOUT #
