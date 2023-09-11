@@ -3,7 +3,7 @@
 
 
 - [Introduction](#introduction)
-- [About] (#about)
+- [About](#About)
 - [Features](#features)
 - [Getting Started](#getting-started)
 - [Usage](#How-to-Use)
@@ -38,7 +38,7 @@ Stay up-to-date with the latest music trends and releases.
 
 To get started with the Music Recommender Website, follow these simple steps:
 
-Visit the Website: (#https://justrecit.netlify.app/)
+Visit the Website:(https://justrecit.netlify.app/)
 
 Discover Music: Search your preferred song to receive a list of recommended songs.
 
