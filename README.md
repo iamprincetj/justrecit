@@ -5,13 +5,13 @@ JustReciT Website
 - [Introduction](#introduction)
 - [Features](#features)
 - [Getting Started](#getting-started)
-- [Usage](#How to Use)
+- [Usage](#How-to-Use)
 - [Contributing](#contributing)
 - [License](#license)
 
 
 
-#Introduction
+# Introduction
 Welcome to JusReciT Website, your go-to platform for discovering new music based on your favorite genres. If you're a music lover looking for fresh tunes and artists to explore, you've come to the right place!
 
 
