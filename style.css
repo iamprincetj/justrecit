@@ -1113,8 +1113,12 @@ footer p {
 
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 380px) {
 	#menu-icon {
 		display: block;
+	}
+	.card-content p {
+		font-size: 13px;
+		margin-bottom: 20px;
 	}
 }

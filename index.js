@@ -80,7 +80,6 @@ setInterval(() => {
 
 makePage = async()=> {
 
-    //let res = await fetch(`https://api.spotify.com/v1/search?query=${search_query}&type=track&limit=3&access_token=${token}`);
     let res = await fetch(`https://api.spotify.com/v1/search?access_token=${token}&query=${search_query}&type=track&limit=3`).catch((error) => {
         console.log(error);
         alert("Sorry there was an error, go again please");
