@@ -8,6 +8,7 @@
 
 }
 
+
 :root {
 	--text-color: #fff;
 	--main-color:
@@ -1020,6 +1021,19 @@ footer p {
 /* Media query for screens smaller than 576px */
 @media (max-width: 576px) {
 
+	.Fav_Artist_Quotes .click_me {
+		display: block;
+	  }
+
+	.card-content p {
+		font-size: 14px;
+		margin-bottom: 20px;
+	}
+
+	.card-content {
+		padding: 1rem;
+	}
+
 	#menu-icon {
 		display: block;
 	}
@@ -1046,6 +1060,10 @@ footer p {
 }
 
 @media (max-width: 462px) {
+
+	.Fav_Artist_Quotes .click_me {
+		display: block;
+	}
 
 	#menu-icon {
         display: block;
@@ -1090,6 +1108,11 @@ footer p {
 		width: 30%;
 	}
 
+	.card-content p {
+		font-size: 13px;
+		margin-bottom: 20px;
+	}
+
 	.logo {
 		font-weight: 900;
 		animation: slideTop 2s ease forwards;
@@ -1121,4 +1144,8 @@ footer p {
 		font-size: 13px;
 		margin-bottom: 20px;
 	}
+
+	.Fav_Artist_Quotes .click_me {
+		display: block;
+	  }
 }

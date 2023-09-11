@@ -1,21 +1,26 @@
-Music Recommender Website
-Welcome to the Music Recommender Website, your go-to platform for discovering new music based on your favorite genres. If you're a music lover looking for fresh tunes and artists to explore, you've come to the right place!
+JustReciT Website
 
-Music Recommender Website
 
-Table of Contents
+Welcome to JusReciT Website, your go-to platform for discovering new music based on your favorite genres. If you're a music lover looking for fresh tunes and artists to explore, you've come to the right place!
+
+
+
+# TABLE OF CONTENT #
 About
 Features
 Getting Started
 How to Use
 Contributing
 License
-About
-The Music Recommender Website is a web-based platform designed to help music enthusiasts discover new songs and artists effortlessly. Our mission is to provide you with tailored music recommendations based on your preferred genres and musical interests.
 
-Features
+
+# ABOUT #
+The Music Recommender Website is a web-based platform designed to help music enthusiasts discover new songs and artists effortlessly. Our mission is to provide you with tailored music recommendations based on your search query.
+
+
+#  FEATURES #
 Personalized Recommendations
-Discover new music based on your favorite genres.
+Discover new music based on your favorite song.
 Receive personalized song and artist suggestions.
 User-Friendly Interface
 A clean and intuitive user interface for a seamless experience.
