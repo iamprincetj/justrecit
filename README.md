@@ -59,11 +59,11 @@ Stay Updated: Keep coming back for more recommendations and stay updated with th
 Contributing
 We welcome contributions from the music-loving community! If you have ideas for improvements or new features, please feel free to contribute. Here's how:
 
-Fork the repository.
-Create a new branch.
-Make your changes and enhancements.
-Test thoroughly.
-Submit a pull request.
+1. Fork the repository.
+2. Create a new branch.
+3. Make your changes and enhancements.
+4. Test thoroughly.
+5. Submit a pull request.
 
 # License
 
