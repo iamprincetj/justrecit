@@ -1,0 +1,79 @@
+.iframe-container {
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 100%;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 64px);
+  opacity: 0.7;
+  position: relative;
+}
+
+.iframe-container .iframe-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.iframe-content .loading-state {
+  border: 1px solid var(--main-color);
+  border-radius: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 355px;
+}
+
+.loading-state h1 {
+  color: var(--white);
+  overflow: hidden;
+  position: relative;
+}
+
+.loading-state h1::before {
+  background-color: var(--main-bg-color);
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  animation: removeWidth 2s linear infinite;
+}
+
+.iframe-container iframe {
+  border: 1px solid var(--main-color);
+  border-radius: 1em;
+  display: block;
+  margin: 1em auto;
+  max-width: 700px;
+  width: 90%;
+  overflow: hidden;
+}
+
+.iframe-container .add-favorite {
+  background-color: var(--second-bg-color);
+  border-radius: 0.5em;
+  color: var(--white);
+  cursor: pointer;
+  font-weight: 800;
+  letter-spacing: 1px;
+  padding: 0.5em 1em;
+  position: absolute;
+  top: 1em;
+  right: 5%;
+}
+
+.add-favorite .icon {
+  font-size: 1.2rem;
+  margin-right: 0.3em;
+  vertical-align: text-top;
+}
+
+.add-favorite .remove-icon {
+  color: red;
+}

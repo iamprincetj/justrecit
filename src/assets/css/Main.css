@@ -1,0 +1,304 @@
+/* KEYFRAME */
+@keyframes TypingWidth {
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes TypingOpacity {
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
+
+@keyframes ShowSocialMediaTop {
+  100% {
+    top: 1rem;
+    opacity: 1;
+  }
+}
+
+@keyframes ShowSocialMediaLeft {
+  100% {
+    left: 5%;
+    opacity: 1;
+  }
+}
+
+.main-container {
+  position: relative;
+}
+
+.main-container .social-media-icon {
+  animation: ShowSocialMediaTop 2s ease-in-out forwards;
+  opacity: 0;
+  position: absolute;
+  margin: auto;
+  top: -1rem;
+  right: 5%;
+}
+
+.social-media-icon .social-icon {
+  color: var(--white);
+  cursor: pointer;
+  font-size: 1.5rem;
+  margin: 0 0.2em;
+  box-shadow: 2px 2px 5px #000;
+}
+
+.social-media-icon .social-icon:hover,
+.social-media-icon .social-icon:focus {
+  color: var(--main-color);
+  transform: translateY(-0.1rem);
+}
+
+.main-container img {
+  width: 100%;
+}
+
+.main-container .main-content {
+  margin: auto;
+  position: relative;
+  text-align: center;
+  max-width: 576px;
+  width: 90%;
+}
+
+.main-content .upper-main-content {
+  margin: 1em 0;
+}
+
+.main-container .text-content {
+  padding: 0.1em 0;
+  position: relative;
+}
+
+.main-container .text-content::before {
+  background-color: var(--main-bg-color);
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  animation: TypingWidth 4s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+.main-content .heading span {
+  color: var(--main-color);
+  line-height: 0.5;
+}
+
+.main-content .sub-heading {
+  line-height: 1.1;
+  margin: 0.5em 0;
+}
+
+.main-content .try-it {
+  background-color: var(--main-color);
+  border: none;
+  border-radius: 3em;
+  box-sizing: border-box;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin: 1em 0;
+  padding: 1em;
+  width: 100%;
+  transition: 0.4s;
+}
+
+.try-it:hover,
+.try-it:focus {
+  background-color: transparent;
+  outline: 0.1em solid var(--main-color);
+}
+
+.main-content .headphone-icon {
+  left: 0;
+  bottom: 106rem;
+  position: absolute;
+  width: 20rem;
+  z-index: -1000;
+}
+
+.headphone-icon:last-of-type {
+  left: 2rem;
+  bottom: 15rem;
+}
+
+.main-container #services {
+  margin: 2em 0;
+}
+
+/* KEY FEATURES */
+.main-container #key-features {
+  margin: 5em 0;
+}
+
+#key-features .feature {
+  background-color: var(--main-bg-color);
+  margin: 8em 0;
+}
+
+.feature img {
+  border: 1px solid;
+  margin: 0.5em 0;
+  width: 50%;
+}
+
+.feature h3 {
+  margin: 1em 0;
+}
+
+.feature p {
+  font-size: calc(1rem + 0.2vw);
+}
+
+/* SERVICES */
+
+#services .spotify-icon {
+  border-radius: 2em;
+  margin: 1em 0;
+  width: 50%;
+}
+
+#services .services-content {
+  text-align: left;
+}
+
+.services-content h3 {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.services-content p {
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  margin: 0.5em 0;
+}
+
+.services-content p a {
+  color: var(--main-color);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+/* ARTIST QUOTES */
+.main-container #artist {
+}
+
+#artist {
+}
+
+/* MEDIA QUERY */
+@media (min-width: 62em) {
+  .main-container .main-content {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    right: 0;
+    min-width: 90%;
+  }
+
+  .main-container .bg-image {
+  }
+
+  .main-content .text-content {
+    top: 15rem;
+    opacity: 0;
+    animation: TypingOpacity 1s ease-in-out forwards;
+    animation-delay: 0.5s;
+  }
+
+  .main-content .text-content::before {
+    background-color: transparent;
+    animation: none;
+  }
+
+  .main-content .upper-main-content {
+    color: #fff;
+    margin-bottom: calc(10em + 1vw);
+  }
+
+  .upper-main-content .heading {
+    font-size: 3.5rem;
+    text-shadow: 5px 10px 5px #000;
+  }
+  .upper-main-content .sub-heading {
+    font-size: 1.7rem;
+    text-shadow: 5px 2px 5px #000;
+  }
+
+  .upper-main-content .try-it {
+    font-size: 1.1rem;
+    width: 30%;
+  }
+
+  .main-content .headphone-icon {
+  }
+
+  /* KEY FEATURES */
+  .main-container #key-features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #key-features .feature {
+    position: relative;
+    top: 15rem;
+    opacity: 0;
+    animation: TypingOpacity 1s ease-in-out forwards;
+    animation-delay: 0.5s;
+  }
+
+  #key-features .feature .feature-content {
+    margin: auto;
+    width: 70%;
+  }
+
+  /* SERVICES */
+  .main-container #services {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 15rem 0;
+  }
+
+  #services .spotify-icon {
+    border-radius: 50%;
+    width: 30%;
+  }
+
+  #services .services-content {
+    width: 45%;
+  }
+
+  /* ARTIST QUOTES */
+  .main-container #artist {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  /* SOCIAL MEDIA ICON */
+
+  .main-container .social-media-icon {
+    animation: ShowSocialMediaLeft 2s ease-in-out forwards;
+    display: flex;
+    flex-direction: column;
+    left: 0;
+    right: auto;
+    top: 50%;
+    opacity: 0;
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+
+  .social-media-icon .social-icon {
+    font-size: 2rem;
+    margin: 0.5em 0;
+  }
+}

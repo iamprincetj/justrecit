@@ -1,0 +1,133 @@
+/* KEYFRAME */
+@keyframes IncreaseWidth {
+  100% {
+    width: 100%;
+  }
+}
+
+.songs-main-container .img-song-container {
+  margin: auto;
+  max-width: 40em;
+  width: 90%;
+}
+
+.img-song-container .search-container {
+  background-color: var(--ashyblue);
+  border-radius: 1.5em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 0.3em 1em;
+  max-width: 26em;
+  margin: 1em auto;
+  width: 70%;
+}
+
+.search-container input {
+  border: none;
+  background-color: transparent;
+  box-sizing: border-box;
+  color: #000;
+  outline: none;
+  padding: 0.5em;
+  width: 100%;
+}
+
+.search-container .search-icon {
+  color: var(--main-color);
+}
+
+.songs-main-container .songs-content-container {
+  margin: auto;
+  max-width: 70rem;
+  width: 90%;
+}
+
+.songs-main-container .songs-text-content {
+  color: var(--main-bg-color);
+  text-align: center;
+}
+
+.songs-text-content h1 {
+  font-size: 1.2rem;
+}
+
+.songs-content-container .songs-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1em;
+  margin: 2em 0;
+  place-content: space-between;
+}
+
+/* NOTIFICATION */
+.notification-msg {
+  background-color: var(--ashyblue);
+  color: #000;
+  position: absolute;
+  text-align: center;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0.5em;
+}
+
+.nav-btn-container {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  margin: 5em auto;
+  width: 50%;
+}
+
+.nav-btn-container button {
+  background-color: transparent;
+  border: none;
+  border: 1px solid var(--main-color);
+  border-radius: 0.5em;
+  color: var(--main-color);
+  padding: 0.2em 1em;
+}
+
+.nav-btn-container .icon {
+  border: none;
+  border: 1px solid var(--main-color);
+  border-radius: 0.2em;
+  color: var(--main-bg-color);
+  cursor: pointer;
+}
+
+.nav-btn-container .active {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.empty-container {
+  text-align: center;
+  margin: 5em auto;
+  width: 90%;
+}
+
+.empty-container .empty-icon {
+  color: var(--main-color);
+  font-size: 5rem;
+}
+
+.empty-container h1 {
+  display: none;
+}
+
+/* MEDIA QUERY */
+
+@media (min-width: 37.5em) {
+  .songs-content-container .songs-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 62em) {
+  .songs-content-container .songs-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
