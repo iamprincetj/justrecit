@@ -1,16 +1,18 @@
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 @font-face {
-  font-family: "KumbhSans-Var";
-  src: url('/src/assets/fonts/Kumbh_Sans/KumbhSans-VariableFont_YOPQ\,wght.ttf');
+  font-family: 'KumbhSans-Var';
+  src: url('fonts/Kumbh_Sans/KumbhSans-VariableFont_YOPQ\,wght.ttf');
 }
 
 :root {
-  font-family: "KumbhSans-Var";
+  font-family: 'KumbhSans-Var';
   line-height: 1.5;
   font-weight: 400;
 
@@ -23,13 +25,10 @@
   --main-bg-color: #242424;
   --bg-color: #182432;
   --second-bg-color: #112e42;
-  --white: #FFF;
+  --white: #fff;
   --ashyblue: #dfeefe;
 
   background-color: var(--main-bg-color);
-}
-
-#root {
 }
 
 button {
@@ -39,5 +38,3 @@ button {
 img {
   max-width: 100%;
 }
-
-
