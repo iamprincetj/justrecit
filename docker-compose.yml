@@ -7,8 +7,15 @@ services:
       - ./:/usr/src/app
     ports:
       - 5173:5173
-    env_file:
-      - .env
+    environment:
+      - clientSecret=${clientSecret}
+      - clientId=${clientId}
+      - apiKey=${apiKey}
+      - authDomain=${authDomain}
+      - projectId=${projectId}
+      - storageBucket=${storageBucket}
+      - messagingSenderId=${messagingSenderId}
+      - appId=${appId}
     container_name: justrecit-production
 
   nginx:
